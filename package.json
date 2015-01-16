@@ -1,0 +1,21 @@
+{
+  "name": "alfred-workflow-helper",
+  "version": "0.0.1",
+  "description": "A tool which help you generate xml for Alfred Workflow by using simple JavaScript object。",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zeronight/alfred-workflow-helper.git"
+  },
+  "keywords": [
+    "alfred",
+    "workflow",
+    "helper",
+    "xml"
+  ],
+  "author": "zeroxiaobai@gmail.com",
+  "license": "ISC"
+}

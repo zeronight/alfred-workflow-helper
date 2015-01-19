@@ -8,7 +8,7 @@ var AlfredNode = function (item) {
     this.buildAttributes();
     this.buildSubItems();
 
-    return this.xmlObj;
+    return {item: this.xmlObj};
 }
 
 AlfredNode.prototype.buildAttributes = function () {
@@ -51,6 +51,8 @@ AlfredNode.prototype.buildSubtitleItems = function () {
             subtitle: {"#text": value, "@mod": mod}
         })
     });
+
+    if(me.xmlObj["#list_shift"].length === 0) { delete me.xmlObj["#list_shift"] }
 }
 
 AlfredNode.prototype.buildIconItems = function () {
@@ -67,6 +69,8 @@ AlfredNode.prototype.buildIconItems = function () {
             icon: {"#text": value, "@type": type}
         })
     });
+
+    if(me.xmlObj["#list_icon"].length === 0) { delete me.xmlObj["#list_icon"] }
 }
 
 AlfredNode.prototype.buildTextItems = function () {
@@ -83,6 +87,8 @@ AlfredNode.prototype.buildTextItems = function () {
             text: {"#text": value, "@type": type}
         })
     });
+
+    if(me.xmlObj["#list_text"].length === 0) { delete me.xmlObj["#list_text"] }
 }
 
 module.exports = {
@@ -106,10 +112,10 @@ module.exports = {
             return;
         }
 
-        items.forEach(buildItem);
+        items.forEach(this.buildItem);
     },
 
     end: function () {
-        return root.end({pretty: true});
+        console.log(root.end({pretty: true}));
     }
 };

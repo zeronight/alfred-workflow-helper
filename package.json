@@ -1,6 +1,6 @@
 {
   "name": "alfred-workflow-helper",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A tool which help you generate xml for Alfred Workflow by using simple JavaScript object。",
   "main": "index.js",
   "scripts": {

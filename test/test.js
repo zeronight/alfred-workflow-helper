@@ -10,7 +10,7 @@ items.push({
     type: "file",
     title: "Desktop",
     subtitle: "~/Desktop",
-    icon: "~/Desktop"
+    icon_fileicon: "~/Desktop"
 });
 
 items.push({
@@ -27,7 +27,7 @@ items.push({
     type: "file",
     title: "My holiday photo",
     subtitle: "~/Pictures/my holiday photo.jpg",
-    icon: "public.jpeg"
+    icon_filetype: "public.jpeg"
 });
 
 items.push({
@@ -48,9 +48,8 @@ items.push({
     text_largetype: "Text fo LargeType"
 });
 
-Alfred.buildItem(items[items.length - 1]);
+Alfred.buildItems(items);
 
-var root = Alfred.end();
+Alfred.end();
 
-console.log(root);
 
